@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+
+@model List<Product>
+
+<h1>List</h1>
+
+
+<a asp-controller="product" asp-action="Register">geri dön</a>
+
+@{
+
+    foreach (var item in Model)
+    {
+        <p>
+        
+        
+        @item.Id   @item.Name
+        <a class="btn btn-outline-danger" asp-action="delete" asp-controller="product" asp-route-id="@item.Id">
+        sil
+        </a> 
+        </p>
+    }
+
+}
+
+
+

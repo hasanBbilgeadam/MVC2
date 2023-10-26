@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Profile";
+}
+
+@model Personel
+
+<h1 class="text-center">Profile</h1>
+
+
+<a class="btn btn-success" asp-action="List" asp-controller="Personel" >   Geri Dön</a>
+<ul class="list-group m-4">
+    <li class="list-group-item">@Model.Id</li>
+    <li class="list-group-item">@Model.Name</li>
+    <li class="list-group-item">@Model.Address</li>
+    <li class="list-group-item">@Model.Cv</li>
+    <li class="list-group-item">
+        
+   
+        @(Enum.GetName(typeof(Gender),Model.Gender))
+        
+    
+    </li>
+</ul>
+
+

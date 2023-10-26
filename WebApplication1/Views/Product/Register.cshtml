@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+@model Product
+<h1>Register</h1>
+
+
+
+
+<form asp-action="register" asp-controller="product" method="post"> 
+
+
+    <input class="form-control" asp-for="Name" placeholder="name"/>
+    <input class="form-control" asp-for="Id" placeholder="ıd"/>
+
+    <button type="submit" class="btn btn-primary">add</button>
+</form>
